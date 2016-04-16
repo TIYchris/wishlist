@@ -1,0 +1,102 @@
+.popupEditContainer{
+	height:400px;
+	width: 600px;
+	border: 1px solid black;
+	background-color: #686A6B;
+    z-index: 100;
+    margin: 0 auto;
+    top: -615px;
+    position: relative;
+    padding: 25px;
+}
+.inputTitle{
+	font-size: 20px;
+	color:whitesmoke;
+	margin-bottom: 20px;
+	top: 29px;
+    left: 12px;
+    position: relative;
+}
+.inputEditTitle{
+	color:whitesmoke;
+	font-size: 20px;
+    position: relative;
+    top: 27px;
+    left: 50px;
+    margin-bottom: 20px;
+    width: 420px;
+}
+.inputPrice{
+	color:whitesmoke;
+	font-size: 20px;
+    position: relative;
+    top: 67px;
+    left: -466px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.inputEditPrice{
+	color:whitesmoke;
+	font-size: 20px;
+    position: relative;
+    top: 17px;
+    left: 87px;
+    margin-bottom: 20px;
+    width: 420px;
+}
+.inputUrl{
+	color:whitesmoke;
+	font-size: 20px;
+    position: relative;
+    top: 56px;
+    left: -429px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.inputEditUrl{
+	color:whitesmoke;
+	font-size: 20px;
+    position: relative;
+    top: 7px;
+    left: 87px;
+    margin-bottom: 20px;
+    width: 420px;
+}
+.inputImage{
+	color:whitesmoke;
+	font-size: 20px;
+    position: relative;
+    top: 45px;
+    left: -429px;
+    margin-left: 20px;
+}
+.inputEditImage{
+	color:whitesmoke;
+	font-size: 20px;
+    position: relative;
+    top: -3px;
+    left: 87px;
+    width: 420px;
+}
+.inputVisible{
+	color:whitesmoke;
+	font-size: 20px;
+    position: relative;
+    top: 102px;
+    left: -385px;
+}
+.inputCancel{
+	position: relative;
+	top: 77px;
+	left: 352px;
+}
+.inputSubmit{
+	position: relative;
+	top: 77px;
+	left: 375px;
+}
+.inputCheckbox{
+    position: relative;
+    top: 100px;
+    left: -466px;    
+}

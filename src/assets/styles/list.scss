@@ -1,0 +1,57 @@
+.birthdayList{
+	font-size: 35px;
+
+}
+.listContainer{
+	height:800px;
+	width:1000px;
+	position: relative;
+    top: 50px;
+    margin: 0 auto;
+}
+.list{
+	height:750px;
+	width:1000px;
+	border: 1px solid black;
+	background-color: #686a6b;
+	display: flex;
+	flex-wrap: wrap;
+}
+.listImg{
+	height: 200px;
+	width: 200px;
+
+}
+.listing{
+	width: 201px;
+	height: 300px;
+	border: 1px solid black;
+	margin-left: 30px;
+	margin-top: 20px;
+	margin-right: 15px;
+}
+.addListing{
+	width: 201px;
+	height: 300px;
+	border: 1px solid black;
+	margin-left: 30px;
+	margin-top: 20px;
+	background-color: #BECFC0;	
+
+}
+.plusListing{
+	position: relative;
+	font-size: 70px;
+	top: -24px;
+	text-align: center;
+	color: whitesmoke;
+}
+.circleListing{
+	border-radius: 50%;
+	height: 75px;
+	width: 75px;
+	position: relative;
+	top:60px;
+	left: 57px;
+	background-color: #3FA154;
+}

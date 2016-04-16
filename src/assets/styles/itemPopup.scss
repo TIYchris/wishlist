@@ -1,0 +1,87 @@
+.popupContainer{
+	width:600px;
+	height:400px;
+	border: 1px solid black;
+	padding: 25px;
+	background-color: #686A6B;
+	margin: 0 auto;
+	position: relative;
+    top: -447px;
+    z-index: 100;
+}
+.itemPopupTitle{
+	color:whitesmoke;
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+.itemPopupPrice{
+	color:whitesmoke;
+	font-size: 20px;
+	position: relative;
+	top: -28px;
+	left: 0px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+.itemPopupUrl{
+	color:whitesmoke;
+	font-size: 20px;
+	position: relative;
+	top: -56px;
+	left: 0px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+.popupTitle{
+	font-size: 40px;
+	color:whitesmoke;
+	margin-bottom: 30px;
+}
+.itemPopupImage{
+	color:whitesmoke;
+	font-size: 20px;
+	position: relative;
+	top: -83px;
+	left: 0px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+.itemTitle{
+	color:whitesmoke;
+	font-size: 20px;
+	position: relative;
+	top: -23px;
+	left: 110px;
+	margin-bottom: 10px;
+
+}
+.itemPrice{
+	color:whitesmoke;
+	font-size: 20px;
+	position: relative;
+	top: -50px;
+	left: 110px;
+	margin-bottom: 10px;
+}
+.itemUrl{
+	color:whitesmoke;
+	font-size: 20px;
+	position: relative;
+	top: -78px;
+	left: 110px;
+	margin-bottom: 10px;
+}
+.itemImage{
+	color:whitesmoke;
+	font-size: 20px;
+	position: relative;
+	top: -105px;
+	left: 110px;
+	margin-bottom: 10px;
+}
+.buttonClose{
+	position: relative;
+	top: -286px;
+	left: 450px;
+}

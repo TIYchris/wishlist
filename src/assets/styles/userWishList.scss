@@ -1,0 +1,31 @@
+.wishContainer{
+	height:750px;
+	width:1000px;
+	border: 1px solid black;
+	background-color: #686a6b;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.wishImg{
+	height: 200px;
+	width: 200px;
+	background-color: red;
+}
+.wishItem{
+	margin-left: 10px;
+}
+.wishPrice{
+	margin-left: 10px;
+}
+.seeItem{
+	margin-left: 10px;
+}
+.wishButton{
+	position: relative;
+    top: 4px;
+    left: 26px;
+    height: 35px;
+    width: 140px;
+}

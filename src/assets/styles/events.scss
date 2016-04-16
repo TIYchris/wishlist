@@ -1,0 +1,120 @@
+.title {
+	height: 110px;
+	width: 350px;
+	left: 525px;
+	position: relative;
+}
+
+.eventsContainer{
+	width: 900px;
+	height: 600px;
+	margin: 0 auto;
+	border: 1px solid black;
+	background: #686a6b;
+	margin-top: 20px;
+	border: 1px solid black;
+	display: flex;
+	position: relative;
+	top:45px;
+
+}
+.event{
+	width:300px;
+	height:65px;
+	background-color: whitesmoke;
+	margin-left: 30px;
+	padding-top: 19px;
+	text-align: center;
+	font-size: 25px;
+}
+.eventsTitle{
+	font-size: 35px;
+	font-family: Courier New, Courier, monospace;
+	color: whitesmoke;
+	margin-left: 75px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.eventLink{
+	text-decoration: none;
+	color: black;	
+}
+.addEvent{
+	width:302px;
+	height:65px;
+	background-color: #BECFC0;
+	margin-left: 30px;
+}
+.plus{
+	position: relative;
+	font-size: 60px;
+	top: -61px;
+	text-align: center;
+	color: whitesmoke;
+}
+.circle{
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	position: relative;
+	top:3px;
+	left: 119px;
+	background-color: #3FA154;
+}
+.pledges{
+	margin-left: 100px;
+}
+.pledgesTitle{
+	font-size: 35px;
+	font-family: Courier New, Courier, monospace;
+	color: whitesmoke;
+	margin-right: 75px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.totalName{
+	font-size: 7px;
+    position: relative;
+    top: -58px;
+    left: 296px;
+    color: whitesmoke;
+}
+.totalDollar{
+	font-size: 30px;
+	position: relative;
+    top: -57px;
+    left: 273px;
+	color: whitesmoke;
+}
+.img{
+	height: 100px;
+	width: 100px;
+}
+.pledgeCard{
+	width: 350px;
+	border: 1px solid black;
+	margin-top:-43px;
+	background-color: whitesmoke;
+}
+.name{
+	position: relative;
+	top: -65px;
+	left: 10px;
+}
+.pledgeDescription{
+	position: relative;
+	top: -50px;
+	left: 110px;
+}
+.pledgeTitle{
+	position: relative;
+	top: -123px;
+	left: 285px;
+	font-size: 7px;
+}
+.pledgeDollar{
+	position: relative;
+	top: -90px;
+	left: 219px;
+	font-size: 30px;
+}

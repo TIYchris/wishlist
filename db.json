@@ -1,0 +1,22 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Maverick",
+      "rating": "PG-13",
+      "score": "5 stars"
+    },
+    {
+      "id": 2,
+      "title": "Serendipity",
+      "rating": "PG-13",
+      "score": "4.5 stars"
+    },
+    {
+      "id": 3,
+      "title": "The Matrix",
+      "rating": "PG-13",
+      "score": "4 stars"
+    }
+  ]
+}

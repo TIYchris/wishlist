@@ -1,0 +1,33 @@
+.popupEventContainer{
+	width:300px;
+	height:150px;
+	z-index: 1000;
+	border: 1px solid white;
+	background-color: #686A6B;
+	margin: 0 auto;
+	position: relative;
+	padding-top:10px;
+}
+.inputEventLabel{
+	font-size: 25px;
+	margin-left: 20px;
+	position: relative;
+}
+.inputEventTitle{
+	width:260px;
+	position: relative;
+	top:0px;
+	left:0px;
+	margin-left:18px;
+	margin-top: 5px;
+}
+.eventCancel{
+	position: relative;
+	top:45px;
+	left: 18px;
+}
+.eventSubmit{
+	position: relative;
+	top:45px;
+	left: 120px;
+}
