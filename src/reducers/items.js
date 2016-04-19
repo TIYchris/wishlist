@@ -19,6 +19,15 @@ export default function(state = initialState, action) {
         case 'PLEDGES_UPDATED':
             newState.pledges = action.pledges;
             break;
+
+        case 'ADD_LIST':
+            newState.newList = action.newList;
+            break;
+
+        // case 'ADD_EVENT_LIST':
+        //     newState.newList = action.newList;
+        //     break;
+
     }
 
     return newState;

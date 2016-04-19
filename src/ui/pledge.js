@@ -14,11 +14,11 @@ export default React.createClass({
   render: function () {
     return (
         <div className="pledgeCard">
-          <img className="img" src={this.props.pledge.img} />
-          <span className="name">{this.props.pledge.title}</span>
+          <img className="img" src={this.props.pledge.item.image} />
+          <span className="name">{this.props.pledge.item.title}</span>
           <div><a className="pledgeDescription" href="#" onClick={this.handleClick}>See This Item</a></div>
           <span className="pledgeTitle">Amount Pledged:</span>
-          <span className="pledgeDollar">${this.props.pledge.amount}</span>
+          <span className="pledgeDollar">${this.props.pledge.pledge_value}</span>
         </div>
     )}
 })

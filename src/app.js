@@ -18,7 +18,9 @@ render(
       <Route path="/" component={Login} />
       <Route path="/events" component={Events} />
       <Route path="/list" component={List} />
+      <Route path="/list/:id" component={List} />
       <Route path="/userWishList" component={UserWishList} />
+      <Route path="/item/:itemId" component={List} />
     </Route>
   </Router>
 , document.getElementById('app'));

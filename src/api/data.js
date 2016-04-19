@@ -27,7 +27,7 @@ export function getLists() {
 
 			store.dispatch({
 				type: "LISTS_UPDATED",
-				lists
+				lists: lists
 			});
 
 			return lists;
@@ -41,9 +41,53 @@ export function getPledges() {
 
 			store.dispatch({
 				type: "PLEDGES_UPDATED",
-				pledges
+				pledges: pledges
 			});
 
 			return pledges;
+		});
+}
+
+export function addList(title, deadline){
+	var payload = {
+		title: title,
+		deadline: deadline
+	};
+
+	return api.post('lists/', payload)
+		.then(function() {
+			getLists();
+		});
+}
+
+export function getListDetails(id) {
+	return api.get('lists/' + id)
+		.then(function(result) {
+			var listDetails = result.data;
+			return listDetails;
+		});
+}
+
+export function getItemDetails(id) {
+	return api.get('items/' + id)
+		.then(function(result) {
+			var itemDetails = result.data;
+			return itemDetails;
+		});
+}
+
+export function addItem(){
+	var payload = {
+		title: title,
+		price: price,
+		description: description,
+		item_url: item_url,
+		image_url: image_url,
+		visible: visible
+	};
+
+	return api.post('lists/' + id, payload)
+		.then(function() {
+			getItem();
 		});
 }

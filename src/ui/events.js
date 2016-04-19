@@ -2,9 +2,9 @@ import React from 'react';
 import Pledge from 'ui/pledge';
 import ItemPopup from 'ui/itemPopup';
 import EventPopup from 'ui/eventPopup';
-
 import store from "store";
 import { getLists, getPledges } from "api/data";
+import { Link } from 'react-router';
 
 var img = require('assets/images/Wishlist.png');
 
@@ -21,21 +21,33 @@ export default React.createClass({
   componentWillMount: function() {
     store.subscribe(this.storeUpdated);
     getLists();
-    // getPledges();
-
-    store.dispatch({
-      type: "PLEDGES_UPDATED",
-      pledges: []
-    })
+    getPledges();
   },
 
   storeUpdated: function() {
       var currentStore = store.getState();
-      debugger;
       this.setState({
-        lists: currentStore.lists,
-        pledges: currentStore.pledges
+        lists: currentStore.lists || [],
+        pledges: currentStore.pledges || []
       });
+  },
+
+  onAddEvent: function(){
+    store.dispatch({
+      type: 'ADD_LIST',
+      newList: {}
+    });
+  },
+
+  getPledgeTotal: function() {
+    var total = 0;
+
+    for (var i = 0; i < this.state.pledges.length; ++i) {
+      var pledge = this.state.pledges[i];
+      total += pledge.pledge_value;
+    }
+
+    return total;
   },
 
   render: function () {
@@ -48,13 +60,12 @@ export default React.createClass({
 
             {this.state.lists.map(function(list) {
                 return (
-                  <a key={list.id} className="eventLink" href="">
+                  <Link key={list.id} className="eventLink" to={"/list/" + list.id}>
                     <div className="event">{list.title}</div>
-                  </a>  
+                  </Link>  
                 )
             })}
-
-	      		<button className="addEvent">
+	      		<button className="addEvent" onClick={this.onAddEvent}>
 	      			<div className="circle"></div>
 	      			<div className="plus">+</div>
 	      		</button>
@@ -62,8 +73,7 @@ export default React.createClass({
       		<div className="pledges">
       			<div className="pledgesTitle">My Pledges</div>
       			<div className="totalName">Total Pledged:</div>
-      			<div className="totalDollar">$600</div>
-
+      			<div className="totalDollar">${this.getPledgeTotal()}</div>
       			{this.state.pledges.map(function(pledge){
               return (<Pledge key={pledge.id} pledge={pledge} />)
             })}
