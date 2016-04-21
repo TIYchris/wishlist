@@ -13,7 +13,11 @@ export default React.createClass({
     },
 
     componentWillMount: function () {
-      store.subscribe(this.storeUpdated);
+      this.unsubcribe = store.subscribe(this.storeUpdated);
+    },
+
+    componentWillUnmount: function (){
+      this.unsubcribe();
     },
 
     storeUpdated: function() {

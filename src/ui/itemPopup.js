@@ -9,19 +9,27 @@ export default React.createClass({
         return {};
     },
   componentWillMount: function () {
-    store.subscribe(function(){
-      var currentStore = store.getState();
+    this.unsubscribe = store.subscribe(this.storeUpdated);
+  },
+
+  componentWillUnmount: function () {
+    this.unsubscribe();
+  },
+
+  storeUpdated: function(){
+    var currentStore = store.getState();
       this.setState({
         item: currentStore.item
-      })
-    }.bind(this));
+      });
   },
+
   onClose: function(e) {
     e.preventDefault();
     this.setState({
         item: undefined
     })
   },
+
  render: function () {
     if (!this.state.item) {
         return null;

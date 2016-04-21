@@ -6,6 +6,7 @@ export default function(state = initialState, action) {
     switch (action.type) {
         case 'ITEM_SELECTED':
             newState.selectedItem = action.selectedItem;
+            newState.selectedList = action.selectedList;
             break;
             
         case 'VIEW_ITEM':

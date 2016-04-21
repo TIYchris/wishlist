@@ -76,18 +76,36 @@ export function getItemDetails(id) {
 		});
 }
 
-export function addItem(){
+export function addItem(list_id, item){
 	var payload = {
-		title: title,
-		price: price,
-		description: description,
-		item_url: item_url,
-		image_url: image_url,
-		visible: visible
+		list: list_id,
+		title: item.title,
+		price: item.price,
+		description: item.description,
+		item_url: item.item_url,
+		image_url: item.image_url,
+		visible: item.visible
 	};
 
-	return api.post('lists/' + id, payload)
+	return api.post('items/', payload)
 		.then(function() {
-			getItem();
+			// getItem();
+		});
+}
+
+export function updateItem(list, item){
+	var payload = {
+		list: list,
+		title: item.title,
+		price: parseFloat(item.price),
+		description: item.description,
+		item_url: item.item_url,
+		image_url: item.image_url,
+		visible: item.visible
+	};
+
+	return api.patch('items/' + item.id, payload)
+		.then(function() {
+			// getItem();
 		});
 }

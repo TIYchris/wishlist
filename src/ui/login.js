@@ -9,14 +9,12 @@ import LoginContainer from 'ui/loginContainer';
 require('assets/styles/login.scss');
 require('font-awesome-webpack');
 
-var img = require('assets/images/Wishlist.png');
 
 
 export default React.createClass({
   render: function () {
     return (
       <div>
-        <img className="title" src={img} />
         <div className="loginContainer">
         <NewUser />
         <LoginContainer />

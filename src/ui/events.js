@@ -6,7 +6,7 @@ import store from "store";
 import { getLists, getPledges } from "api/data";
 import { Link } from 'react-router';
 
-var img = require('assets/images/Wishlist.png');
+
 
 require('assets/styles/eventPopup.scss');
 
@@ -19,9 +19,13 @@ export default React.createClass({
   },
 
   componentWillMount: function() {
-    store.subscribe(this.storeUpdated);
+    this.unsubscribe = store.subscribe(this.storeUpdated);
     getLists();
     getPledges();
+  },
+
+  componentWillUnmount: function() {
+    this.unsubscribe();
   },
 
   storeUpdated: function() {
@@ -53,7 +57,6 @@ export default React.createClass({
   render: function () {
     return (
       <div>
-      	<img className="title" src={img} />
       	<div className="eventsContainer">
       		<div>
 	      		<div className="eventsTitle">My Events</div>

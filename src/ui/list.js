@@ -4,8 +4,6 @@ import WishlistItem from 'ui/wishlistItem';
 import EditItemPopup from 'ui/editItemPopup';
 import {getListDetails} from 'api/data';
 
-var img = require('assets/images/Wishlist.png');
-	
 require('assets/styles/list.scss');
 
 export default React.createClass({
@@ -32,14 +30,21 @@ export default React.createClass({
 		e.preventDefault();
 		store.dispatch({
           type: 'ITEM_SELECTED',
-          selectedItem: {}
+          selectedList: this.props.params.id,
+          selectedItem: {
+	        title: "",
+	        price: "",
+	        description: "",
+	        item_url: "",
+	        image_url: "",
+	        visible: false
+          }
         });
 	},
 
   render: function () {
     return (
     	<div>
-    		<img className="title" src={img} />
     		<div className="listContainer">
     			<div className="birthdayList">{this.state.title}</div>
     			<div className="list">
@@ -53,8 +58,7 @@ export default React.createClass({
 		      		</button>
     			</div>
     		</div>
-    		<EditItemPopup item={this.state.selectedItem} />
+    		<EditItemPopup />
     	</div>
-
     )}
 })
