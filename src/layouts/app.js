@@ -12,7 +12,7 @@ export default React.createClass({
         <Link to="/events">events</Link><br />
         <Link to="/list">List</Link><br />
         <Link to="/userWishList">UserWishList</Link>
-        <div>
+        <div className="titleContainer">
           <img className="title" src={img} />
         </div>
         {this.props.children}
